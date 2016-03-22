@@ -1,13 +1,13 @@
-# BitTorrent Sync
+# BitTorrent Sync for ARM
 # VERSION 0.2
 
-FROM ubuntu:14.04
+FROM resin/rpi-raspbian:wheezy
 
-MAINTAINER Bill Thornton <billt2006@gmail.com>
+MAINTAINER jerseyweds <@jerseyweeds>
 
 # Download and extract the executable to /usr/bin
-ADD http://download-new.utorrent.com/endpoint/btsync/os/linux-x64/track/stable /usr/bin/btsync.tar.gz
-RUN cd /usr/bin && tar -xzvf btsync.tar.gz && rm btsync.tar.gz
+ADD http://download-new.utorrent.com/endpoint/btsync/os/linux-arm/track/stable /usr/bin/bittorrent_sync_arm.tar.gz
+RUN cd /usr/bin && tar -xzvf bittorrent_sync_arm.tar.gz && rm bittorrent_sync_arm.tar.gz
 
 # Web GUI
 EXPOSE 8888
